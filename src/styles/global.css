@@ -229,6 +229,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  padding: 0 1.5rem;
 }
 
 .section--split {
@@ -893,10 +894,6 @@ a {
     padding-top: 4.5rem;
   }
 
-  .hero__content {
-    padding: 2.5rem 1.8rem;
-  }
-
   .hero__highlights {
     grid-template-columns: 1fr 1fr;
   }
@@ -933,6 +930,10 @@ a {
 
   .section__header {
     padding: 0 0.5rem;
+  }
+
+  .section {
+    padding: 0 1rem;
   }
 
   .site-footer {
@@ -995,6 +996,101 @@ a {
   .lightbox__close {
     top: 0.75rem;
     right: 0.75rem;
+  }
+
+  .hero__content {
+    padding: 2.2rem 1.6rem;
+    border-radius: 28px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero__tagline {
+    font-size: 1rem;
+  }
+
+  .wish-form-card,
+  .wish-board {
+    padding: 1.8rem 1.4rem;
+  }
+
+  .wish-card {
+    padding: 1.35rem 1.4rem;
+  }
+
+  .wish-card__message {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .wish-form__actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 0.9rem 2.8rem;
+  }
+
+  .hero__content {
+    padding: 1.9rem 1.25rem;
+  }
+
+  .hero__badge {
+    font-size: 0.7rem;
+    padding: 0.55rem 1.1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .hero__tagline {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 0 0.75rem;
+  }
+
+  .section__header h2 {
+    font-size: 1.65rem;
+  }
+
+  .wish-form-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .wish-form-card__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .wish-card__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .wish-card__actions button {
+    width: 100%;
+  }
+
+  .gift-card {
+    padding: 1.85rem 1.4rem;
+  }
+
+  .site-footer {
+    margin: 2.5rem 0.85rem 2rem;
+    padding: 1.8rem 1.4rem;
   }
 }
 
