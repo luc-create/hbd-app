@@ -139,13 +139,21 @@ function App() {
 
       try {
         if (editingWish) {
-          const { error } = await supabase
+          const { data, error } = await supabase
             .from('wishes')
             .update(payload)
             .eq('id', editingWish.id)
+            .eq('owner_id', visitorId)
+            .select('id')
 
           if (error) {
             throw error
+          }
+
+          if (!data || data.length === 0) {
+            throw new Error(
+              "Impossible de modifier ce voeu. Il n'existe plus ou tu n'en es pas l'auteur.",
+            )
           }
         } else {
           const { error } = await supabase.from('wishes').insert([payload])
